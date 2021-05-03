@@ -1,10 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 const Dropdown = ({ label, options, selected, onSelectedChange }) => {
   const [open, setOpen] = useState(false);
   const ref = useRef();
 
   useEffect(() => {
+    console.log('aeaeae');
     const onBodyClick = (event) => {
       if (ref.current.contains(event.target)) {
         return;
